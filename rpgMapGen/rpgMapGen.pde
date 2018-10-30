@@ -2,6 +2,7 @@
 void setup(){
   size(600,600);
   thread("generate");
+  noStroke();
 }
 
 boolean loading = true;

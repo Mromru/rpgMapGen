@@ -1,4 +1,4 @@
-int rozmiar = 40;
+int rozmiar = 80;
 int lvl = 1;
 int pocz_x;
 int pocz_y;
@@ -19,7 +19,7 @@ void generate(){
 
   for(int i = 0; i<20; i++){ //symuluję opoznienie
       addProgress(5); //uznaniowo wykonałem 5% generacji mapy, więc wysyłam info
-      delay(50); //symuluję jakieś Twoje operacje
+      //delay(50); //symuluję jakieś Twoje operacje
   }
 }
 
@@ -41,14 +41,14 @@ void koniec() {
   kon_y = pocz_y;
   int polowa = rozmiar / 2;
   if (pocz_x >= polowa) {
-    if(pocz_x!= polowa) kon_x -= int(random(polowa - pocz_x)) + (rozmiar - 2) / 2;
+    if(pocz_x!= polowa) kon_x -= random(polowa - pocz_x) + (rozmiar - 2) / 2;
     else kon_x -= (rozmiar - 2) / 2;
   }
   else kon_x += random(polowa - pocz_x) + (rozmiar - 2) / 2;
   if (pocz_y >= polowa) {
-    if (pocz_y != polowa) kon_y -= int(random(polowa - pocz_x)) + (rozmiar - 2) / 2;
+    if (pocz_y != polowa) kon_y -= random(polowa - pocz_y) + (rozmiar - 2) / 2;
     else kon_y -= (rozmiar - 2) / 2;
   }
-  else kon_y += random(polowa - pocz_x) + (rozmiar - 2) / 2;
+  else kon_y += random(polowa - pocz_y) + (rozmiar - 2) / 2;
    println("["+kon_x+"]"+"["+kon_y+"]");
 }

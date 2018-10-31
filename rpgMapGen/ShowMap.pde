@@ -40,6 +40,12 @@ void showMap(){
            case 0:
            fill(0);
            break;
+           case 2:
+           fill(color(0, 204, 0));
+           break;
+           case 3:
+           fill(color(204, 0, 0));
+           break;
            default:
            fill(255);
         }

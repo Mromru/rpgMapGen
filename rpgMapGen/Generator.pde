@@ -7,15 +7,16 @@ int kon_y;
 
 void generate(){
   array= new int [rozmiar][rozmiar];
+    poczatek();
+    koniec();
   for(int i = 0; i<rozmiar*rozmiar;i++){
      if(((i/rozmiar)+i%rozmiar)%2 == 0){ //(y+x)%2 == 0 // do generowania szachownicy;
         array[i/rozmiar][i%rozmiar] = 1; //array[y][x] = 1;
      }
   }
-  poczatek();
-  koniec();
-  //array[pocz_y][pocz_x] = 'S';
- // array[kon_y][kon_x] = 'K';
+  array[pocz_x][pocz_y] = 2;  //start
+  array[kon_x][kon_y] = 3;  //koniec
+
   for(int i = 0; i<20; i++){ //symuluję opoznienie
       addProgress(5); //uznaniowo wykonałem 5% generacji mapy, więc wysyłam info
       delay(50); //symuluję jakieś Twoje operacje
@@ -30,14 +31,12 @@ void grid() {
 }
 
 void poczatek() {
-  randomSeed(0);
   pocz_x = int(random(rozmiar - 2))+ 1;  
   pocz_y = int(random(rozmiar - 2))+ 1;
   println("["+pocz_x+"]"+"["+pocz_y+"]");
 }
 
 void koniec() {
-  randomSeed(0);
   kon_x = pocz_x;
   kon_y = pocz_y;
   int polowa = rozmiar / 2;

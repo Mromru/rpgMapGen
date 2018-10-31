@@ -21,6 +21,10 @@ float evalSizeX(){
   return (float)width/evalCountX();
 }
 
+void autoClip(){
+   clip(0,rozmiar-1,0,rozmiar-1); 
+}
+
 void clip(int startX, int endX,int startY,int endY){
   X_COUNT = Math.abs(endX-startX)+1;
   Y_COUNT = Math.abs(endY-startY)+1;

@@ -21,6 +21,7 @@ void generate(){
       addProgress(5); //uznaniowo wykonałem 5% generacji mapy, więc wysyłam info
       //delay(50); //symuluję jakieś Twoje operacje
   }
+  autoClip();
 }
 
 void grid() {

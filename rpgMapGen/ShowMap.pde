@@ -1,7 +1,7 @@
 
 
-final int X_COUNT = 3;
-final int Y_COUNT = 3;
+int X_COUNT = 3;
+int Y_COUNT = 3;
 int currentCenterX = 25;
 int currentCenterY = 25;
 float scale = 1.0f;
@@ -19,6 +19,13 @@ float evalSizeY(){
 }
 float evalSizeX(){
   return width/evalCountX();
+}
+
+void clip(int startX, int endX,int startY,int endY){
+  X_COUNT = Math.abs(endX-startX)+1;
+  Y_COUNT = Math.abs(endY-startY)+1;
+  currentCenterX = (endX+startX)/2;
+  currentCenterY = (endX+startX)/2;
 }
 
 void showMap(){

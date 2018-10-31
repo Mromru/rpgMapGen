@@ -25,7 +25,7 @@ void clip(int startX, int endX,int startY,int endY){
   X_COUNT = Math.abs(endX-startX)+1;
   Y_COUNT = Math.abs(endY-startY)+1;
   currentCenterX = (endX+startX)/2;
-  currentCenterY = (endX+startX)/2;
+  currentCenterY = (endY+startY)/2;
 }
 
 void showMap(){

@@ -29,7 +29,6 @@ void clip(int startX, int endX,int startY,int endY){
 }
 
 void showMap(){
-  println(evalCountX());
   int yCount = evalCountY();
   int xCount = evalCountX();
   for(int y = 0; y<yCount; y++){
